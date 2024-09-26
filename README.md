@@ -1,3 +1,3 @@
-# Frontend template
+# Overlay preview
 
-Using NextJS, Zustand and Typescript with TailwindCSS and ShadCN
+Overlay for tcc minis probably
