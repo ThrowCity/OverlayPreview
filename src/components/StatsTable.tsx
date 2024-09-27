@@ -59,6 +59,9 @@ export function StatsTable({ variant }: StatsTableProps) {
             <tbody>
               <StatRow variant={variant} index={0} />
               <StatRow variant={variant} index={1} />
+              <StatRow variant={variant} index={0} />
+              <StatRow variant={variant} index={1} />
+              <StatRow variant={variant} index={0} />
             </tbody>
           </table>
         </div>

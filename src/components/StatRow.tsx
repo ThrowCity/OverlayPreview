@@ -29,7 +29,7 @@ export function StatRow({ variant, index }: StatRowProps) {
   const renderUltimate = () => {
     if (player.ult === characterImages[player.character].ult) {
       return (
-        <div className="bg-red-500 rounded-lg flex items-center justify-center w-20 ml-1 h-12 mt-1">
+        <div className={cn('bg-opacity-50 rounded-lg flex items-center justify-center w-20 ml-1 h-[50px] mt-0.5', isAttack ? 'bg-red-500' : 'bg-green-500')}>
           <Image
             src={characterImages[player.character].x}
             alt={`${player.character} ultimate`}
@@ -86,9 +86,9 @@ export function StatRow({ variant, index }: StatRowProps) {
 
   const renderKda = () => (
     <>
-      <td className="w-[4.6%] text-center border-x-[3px] border-gray-700">{player.kills}</td>
+      <td className="w-[4.6%] text-center border-x-[3px] border-black border-opacity-25">{player.kills}</td>
       <td className="w-[4.6%] text-center">{player.deaths}</td>
-      <td className="w-[4.6%] text-center border-x-[3px] border-gray-700">{player.assists}</td>
+      <td className="w-[4.6%] text-center border-x-[3px] border-black border-opacity-25">{player.assists}</td>
     </>
   );
 
@@ -168,7 +168,7 @@ export function StatRow({ variant, index }: StatRowProps) {
   );
 
   const renderShield = () => (
-    <td className="w-[5%] border-x-[3px] border-gray-700">
+    <td className="w-[5%] border-x-[3px] border-black border-opacity-25">
       <div className="flex justify-center">
         <Image
           src={shieldImages[player.shield]}
@@ -181,7 +181,7 @@ export function StatRow({ variant, index }: StatRowProps) {
   );
 
   const renderWeapon = () => (
-    <td className={cn('w-[13.75%] border-gray-700', isAttack ? 'border-l-[3px]' : 'border-r-[3px]')}>
+    <td className={cn('w-[13.75%]  border-black border-opacity-25', isAttack ? 'border-l-[3px]' : 'border-r-[3px]')}>
       <div className="flex justify-center">
         <Image
           src={weaponImages[player.weapon]}
